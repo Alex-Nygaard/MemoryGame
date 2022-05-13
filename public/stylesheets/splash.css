@@ -1,0 +1,78 @@
+body {
+    margin: 0px;
+    font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: lightskyblue;
+    height: 100vh;
+}
+
+.container {
+    height: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+}
+
+.container > h1 {
+    animation: pulse 1s linear 0s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+button {
+    padding: 5px;
+    width: 200px;
+    height: 70px;
+    background-color: orange;
+}
+
+button:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+.howToPlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.howToPlay > h2::before {
+    content: "🤔";
+    font-size: larger;
+    margin-right: 10px;
+}
+
+.howToPlay > h2::after {
+    content: "❓";
+    font-size: larger;
+    margin-left: 10px;
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    height: 100px;
+}
+.link:hover {
+    color: lightsalmon;
+}
+.link:active {
+    color: lime;
+}
+/*div:nth-of-type(1)::after {
+    content: "";
+    background-image: url(../images/windmolen.jpeg);
+}*/
